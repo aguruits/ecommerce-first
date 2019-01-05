@@ -1,0 +1,28 @@
+# HTTP Server (Tomcat) Port
+server:
+  port: 8070
+  
+### Spring properties
+# Service registers under this name
+spring:
+  application:
+    name: ecomm-api-gateway
+    
+# Discovery Server Access
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+      
+zuul:
+  prefix: /ecomm
+  routes:
+    product:
+      path: /eProduct/**
+      service-id: ECOMM-PRODUCT-SERVICE
+    user:
+      path: /eUser/**
+      service-id: ECOMM-USER-SERVICE
+    order:
+      path: /eOrder/**
+      service-id: ECOMM-ORDER-SERVICE

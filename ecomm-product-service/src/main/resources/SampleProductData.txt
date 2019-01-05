@@ -1,0 +1,34 @@
+
+URL: http://localhost:8085/h2-console/
+
+DROP TABLE ECOMM_PRODUCTS IF EXISTS;
+
+create table ECOMM_PRODUCTS (
+PRODUCT_ID INTEGER NOT NULL,
+PRODUCT_CODE VARCHAR2(20 CHAR) not null,
+NAME VARCHAR2(255 CHAR) not null,
+PRICE FLOAT not null,
+AVAILABLE_QUANTIY NUMBER(10) NOT NULL,
+CREATE_DATE DATE default sysdate not null
+) ;
+
+
+insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (1, 'S001', 'Core Java', 100, 50, sysdate);
+insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (2, 'S002', 'Spring for Beginners', 50, 100, sysdate);
+insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (3, 'S003', 'Swift for Beginners', 120, 200, sysdate);
+insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (4, 'S004', 'Oracle XML Parser', 120, 30, sysdate);
+insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (5, 'S005', 'CSharp Tutorial for Beginers', 110, 60, sysdate);
+
+http://localhost:8085/product/getProducts
+http://localhost:8085/product/getProduct/1
+http://localhost:8085/product/addProduct
+http://localhost:8085/product/updateProduct
+http://localhost:8085/product/deleteProduct/2
+
+{
+"productId":6,
+"productCode":"S006",
+"name":"Dockers",
+"price":1560.0,
+"createDate":"2018-12-27"
+}

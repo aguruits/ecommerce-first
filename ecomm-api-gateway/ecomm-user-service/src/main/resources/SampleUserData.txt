@@ -1,0 +1,31 @@
+
+URL: http://localhost:8090/h2-console/
+
+DROP TABLE ECOMM_USERS IF EXISTS;
+
+create table ECOMM_USERS (
+	USER_ID INTEGER NOT NULL,
+	USER_NAME VARCHAR2(20 CHAR) not null,
+	ACTIVE NUMBER(1) not null,
+	PASSWORD VARCHAR2(20 CHAR) not null,
+	USER_ROLE VARCHAR2(20) not null
+) ;
+
+
+insert into ECOMM_USERS (USER_ID, USER_NAME, ACTIVE, PASSWORD, USER_ROLE) values (1, 'Guru', 1, '123', 'EMPLOYEE');
+insert into ECOMM_USERS (USER_ID, USER_NAME, ACTIVE, PASSWORD, USER_ROLE) values (2, 'Murthy', 1, '123', 'MANAGER');
+
+http://localhost:8085/user/getUsers
+http://localhost:8085/user/getUser/Guru
+http://localhost:8085/user/addUser
+http://localhost:8085/user/updateUser
+http://localhost:8085/user/deleteUser/Guru
+
+## Add New User
+{
+"userId":3,
+"userName":"Gurumurthy",
+"active":1,
+"password":"123",
+"userRole":"EMPLOYEE"
+}

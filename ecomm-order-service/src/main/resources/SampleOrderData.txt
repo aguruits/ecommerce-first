@@ -1,0 +1,36 @@
+
+URL: http://localhost:8095/h2-console/
+
+DROP TABLE ECOMM_ORDER_DETAIL IF EXISTS;
+
+create table ECOMM_ORDER_DETAIL (
+	ORDER_ID INTEGER NOT NULL,
+	USER_ID INTEGER NOT NULL,
+	PRODUCT_ID INTEGER NOT NULL,
+	QUANTIY NUMBER(10) NOT NULL,
+	PRICE FLOAT NOT NULL,
+	AMOUNT FLOAT NOT NULL	
+);
+
+
+insert into ECOMM_ORDER_DETAIL (ORDER_ID, USER_ID, PRODUCT_ID, QUANTIY, PRICE, AMOUNT) values (1, 1, 1, 5, 100, 500);
+insert into ECOMM_ORDER_DETAIL (ORDER_ID, USER_ID, PRODUCT_ID, QUANTIY, PRICE, AMOUNT) values (2, 1, 2, 3, 70, 210);
+insert into ECOMM_ORDER_DETAIL (ORDER_ID, USER_ID, PRODUCT_ID, QUANTIY, PRICE, AMOUNT) values (3, 2, 1, 10, 70, 700);
+insert into ECOMM_ORDER_DETAIL (ORDER_ID, USER_ID, PRODUCT_ID, QUANTIY, PRICE, AMOUNT) values (4, 2, 2, 50, 50, 2500);
+
+http://localhost:8095/order/getOrders
+http://localhost:8095/order/getOrder/1
+http://localhost:8095/createOrder/create
+http://localhost:8095/order/addOrder
+http://localhost:8095/order/updateOrder
+http://localhost:8095/order/deleteOrder/1
+
+## Add New User
+{
+"orderId":5,
+"userId":1,
+"productId":1,
+"quantity":3,
+"price":23.0,
+"amount":46.0
+}
