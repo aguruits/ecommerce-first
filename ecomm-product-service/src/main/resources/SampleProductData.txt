@@ -18,6 +18,7 @@ insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUA
 insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (3, 'S003', 'Swift for Beginners', 120, 200, sysdate);
 insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (4, 'S004', 'Oracle XML Parser', 120, 30, sysdate);
 insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (5, 'S005', 'CSharp Tutorial for Beginers', 110, 60, sysdate);
+insert into ECOMM_PRODUCTS (PRODUCT_ID, PRODUCT_CODE, NAME, PRICE, AVAILABLE_QUANTIY, CREATE_DATE) values (6, 'S006', 'Dockers', 110, 89, sysdate);
 
 http://localhost:8085/product/getProducts
 http://localhost:8085/product/getProduct/1
@@ -26,9 +27,9 @@ http://localhost:8085/product/updateProduct
 http://localhost:8085/product/deleteProduct/2
 
 {
-"productId":6,
-"productCode":"S006",
-"name":"Dockers",
+"productId":7,
+"productCode":"S007",
+"name":"Microservices",
 "price":1560.0,
 "createDate":"2018-12-27"
 }
